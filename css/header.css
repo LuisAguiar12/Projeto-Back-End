@@ -25,60 +25,8 @@
 }
 
 
-
-* {
-
-    box-sizing: border-box;
-
-    margin: 0;
-
-}
-
-
-
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-
-
-body {
-
-    min-width: 320px;
-
-    
-
-    font-family: var(--fonte-sans);
-
-    -webkit-font-smoothing: antialiased;
-
-}
-
-
-
-::selection {
-
-    background: var(--dourado);
-
-    color: #160f09;
-
-}
-
-
-
-a:focus-visible {
-
-    outline: 2px solid var(--dourado);
-
-    outline-offset: 3px;
-
-}
-
-
-
 /* ---------- Barra de progresso (criada pelo JS) ---------- */
+
 
 .progresso {
 
@@ -212,8 +160,6 @@ a:focus-visible {
 
     background: var(--dourado);
 
-    content: "";
-
     transform: translateX(-50%) scaleX(0);
 
     transform-origin: right;
@@ -282,9 +228,9 @@ a:focus-visible {
 
 .header-acoes img {
 
-    width: 21px;
+    width: 32px;
 
-    height: 21px;
+    height: 32px;
 
 }
 
