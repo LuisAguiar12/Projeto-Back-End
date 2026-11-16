@@ -20,9 +20,9 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
             <img src="<?= $basePath ?>image/Logo.svg" alt="Logo">
         </div>
 
-        <div class="telas-adm">
+        <sidebar class="telas-adm">
 
-            <a class="telas <?= $paginaAtual === 'index.php' ? 'ativo' : '' ?>" href="<?= $basePath ?>">
+            <a class="telas <?= $paginaAtual === 'home.php' ? 'ativo' : '' ?>" href="<?= $basePath ?>">
                 <img src="<?= $basePath ?>image/Inicio.svg" alt="Início">
                 <h1>Início</h1>
             </a>
@@ -47,7 +47,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
                 <h1>Estoque</h1>
             </a>
 
-        </div>
+</sidebar>
 
         <div class="sair">
             <img src="<?= $basePath ?>image/Sair.svg" alt="Sair">

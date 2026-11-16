@@ -9,7 +9,7 @@
 <body>
     <div class="info-adm">
         <header>
-            <input src="/image/lupa-arredondada.png" type="search" placeholder=" Buscar Produtos" >
+            <input type="search" placeholder=" Buscar Produtos" >
         </header>
         <div class="info">
             <img src="/image/admin.png" alt="">

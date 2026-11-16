@@ -8,9 +8,13 @@
     display: flex;
     background-color: black;
     flex-direction: column;
-    width: 380px;
+    width: 340px;
+    z-index: 1000;
     height: 100vh;
     color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
     a{
         text-decoration: none;
         color: white;
