@@ -1,0 +1,317 @@
+:root {
+
+    --preto: #090807;
+
+    --preto-header: #050505;
+
+    --creme: #f3eee6;
+
+    --dourado: #d6b77a;
+
+    --dourado-suave: rgba(214, 183, 122, 0.55);
+
+    --texto-escuro: #201b16;
+
+    --fonte-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+    --fonte-sans: Arial, Helvetica, sans-serif;
+
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    --ease-lento: cubic-bezier(0.16, 1, 0.3, 1);
+
+    --ease-suave: cubic-bezier(0.65, 0, 0.35, 1);
+
+}
+
+
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    min-width: 320px;
+
+    
+
+    font-family: var(--fonte-sans);
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+
+::selection {
+
+    background: var(--dourado);
+
+    color: #160f09;
+
+}
+
+
+
+a:focus-visible {
+
+    outline: 2px solid var(--dourado);
+
+    outline-offset: 3px;
+
+}
+
+
+
+/* ---------- Barra de progresso (criada pelo JS) ---------- */
+
+.progresso {
+
+    position: fixed;
+
+    z-index: 60;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: linear-gradient(90deg, #8c6f3a, var(--dourado));
+
+    transform: scaleX(var(--p, 0));
+
+    transform-origin: left;
+
+    pointer-events: none;
+
+}
+
+
+
+/* ---------- Cabeçalho ---------- */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+    display: flex;
+
+    height: 88px;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 clamp(16px, 4vw, 56px);
+
+    background: var(--preto-header);
+
+    border-bottom: 1px solid transparent;
+
+    transition: height 600ms var(--ease-lento), background-color 600ms var(--ease),
+
+        border-color 600ms var(--ease), transform 700ms var(--ease-lento);
+
+}
+
+
+
+.header.compacto {
+
+    height: 68px;
+
+    background: rgba(5, 5, 5, 0.85);
+
+    border-bottom-color: rgba(214, 183, 122, 0.22);
+
+    backdrop-filter: blur(12px) saturate(120%);
+
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+
+}
+
+
+
+/* esconde ao descer, volta ao subir */
+
+
+
+
+
+.header-navegacao,
+
+.header-acoes {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+
+.header a {
+
+    position: relative;
+
+    display: grid;
+
+    width: 44px;
+
+    height: 44px;
+
+    place-items: center;
+
+    color: var(--dourado);
+
+    text-decoration: none;
+
+}
+
+
+
+/* linha dourada que "desenha" sob o ícone */
+
+.header-navegacao a::after,
+
+.header-acoes a::after {
+
+    position: absolute;
+
+    bottom: 4px;
+
+    left: 50%;
+
+    width: 18px;
+
+    height: 1px;
+
+    background: var(--dourado);
+
+    content: "";
+
+    transform: translateX(-50%) scaleX(0);
+
+    transform-origin: right;
+
+    transition: transform 600ms var(--ease-lento);
+
+}
+
+
+
+.header .menu-link {
+
+    display: grid;
+
+    width: 48px;
+
+}
+
+
+
+.header .header-logo {
+
+    position: absolute;
+
+    left: 50%;
+
+    display: block;
+
+    width: clamp(124px, 14vw, 190px);
+
+    height: auto;
+
+    transform: translateX(-50%);
+
+}
+
+
+
+.header-logo::after {
+
+    display: none;
+
+}
+
+
+
+.header-logo img {
+
+    display: block;
+
+    width: 100%;
+
+    transition: transform 700ms var(--ease-lento), opacity 500ms var(--ease);
+
+}
+
+
+
+.header.compacto .header-logo img {
+
+    transform: scale(0.86);
+
+}
+
+
+
+.header-acoes img {
+
+    width: 21px;
+
+    height: 21px;
+
+}
+
+
+
+.menu-icone {
+
+    width: 32px;
+
+    height: 32px;
+
+}
+
+
+
+.menu-icone--catalogo {
+
+    width: 36px;
+
+    height: 36px;
+
+}
+
+
+
+.header a img {
+
+    transition: transform 600ms var(--ease-lento), opacity 500ms var(--ease);
+
+}
