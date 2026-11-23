@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+=======
+<?php
+    session_start();
+    require "./data/conexao.php";
+    $mensagem_erro = "";
+
+    if($_SERVER["REQUEST_METHOD"] === "POST"){
+        $email = trim($_POST["email"]);
+        $senha = trim($_POST["senha"]);
+
+        $sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+
+        $stmt = $conn->prepare($sql);
+        $stmt ->bind_param("ss", $email, $senha);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        $usuario = $resultado->fetch_object();
+        if($usuario){
+            $_SESSION["usuario_id"] = $usuario ->id;
+            $_SESSION["usuario_nome"] = $usuario ->nome;
+            $_SESSION["tipo_usuário"] = $usuario ->tipo;
+
+            header("Location: /produtos.php");
+            exit;
+            }
+            else{
+            $mensagem_erro = "Credencais Invalidas";
+        };
+    };
+
+?>
+
+
+>>>>>>> 7116ede3ff1994b3e04c18ba68f3120f0203c249
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -58,7 +93,11 @@
 
                 <!-- BOTÃO ENTRAR -->
                 <button type="submit" class="btn-entrar">
+<<<<<<< HEAD
                     Entrar
+=======
+                    <a href="index.php">ssssss</a>Entrar
+>>>>>>> 7116ede3ff1994b3e04c18ba68f3120f0203c249
                 </button>
 
                 <!-- CADASTRO -->
