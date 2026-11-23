@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pedidos</title>
     <link rel="stylesheet" href="./css/menu-lateral.css">
     <link rel="stylesheet" href="./css/pedidos.css">
 </head>
@@ -19,7 +19,7 @@
          <div class="container">
 
         <div class="titulo">
-            <h1>Pedidos</h1>
+            <h1>Produtos</h1>
             <span></span>
         </div>
 

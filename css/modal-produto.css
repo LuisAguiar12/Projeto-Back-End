@@ -1,0 +1,306 @@
+
+/* FUNDO DO MODAL */
+.modal-overlay {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    z-index: 999;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* MODAL VISÍVEL */
+.modal-overlay.ativo {
+    display: flex;
+}
+
+/* CAIXA PRINCIPAL */
+.modal-container {
+    width: 100%;
+    max-width: 1215px;
+
+    min-height: 680px;
+
+    background: #f7f4f2;
+
+    border-radius: 16px;
+
+    padding: 60px 65px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    box-sizing: border-box;
+}
+
+/* LADO DAS IMAGENS */
+.modal-imagens {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+/* IMAGEM PRINCIPAL */
+.imagem-principal {
+    width: 100%;
+    height: 427px;
+
+    background: #d9d9d9;
+    overflow: hidden;
+}
+
+.imagem-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MINIATURAS */
+.miniaturas {
+    display: flex;
+    gap: 16px;
+
+    margin-top: 14px;
+}
+
+.miniaturas img {
+    width: 30%;
+    height: 118px;
+
+    object-fit: cover;
+
+    background: #d9d9d9;
+    cursor: pointer;
+}
+
+/* LADO DAS INFORMAÇÕES */
+.modal-informacoes {
+    flex: 1;
+    min-width: 0;
+    color: #555;
+}
+
+/* NOME DO PRODUTO */
+.modal-informacoes h2 {
+    font-size: 34px;
+    font-weight: 400;
+
+    margin: 0 0 10px;
+}
+
+/* PREÇO */
+.modal-informacoes .preco {
+    font-size: 60px;
+    font-weight: bold;
+
+    color: #dabb7d;
+
+    margin: 0;
+}
+
+/* ESTOQUE */
+.modal-informacoes h3 {
+    font-size: 32px;
+    font-weight: 400;
+
+    margin: 0 0 6px;
+}
+
+/* LINHA DIVISÓRIA */
+.modal-informacoes hr {
+    border: none;
+    border-top: 1px solid #555;
+
+    margin: 8px 0 12px;
+}
+
+/* DETALHES */
+.detalhes-produto p {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+/* BOTÕES */
+.modal-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+.modal-botoes button,
+.modal-botoes a {
+    width: 100%;
+    height: 64px;
+
+    border: none;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 27px;
+    font-family: inherit;
+
+    color: white;
+    text-decoration: none;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition: 0.2s;
+}
+
+.modal-botoes span {
+    font-size: 34px;
+}
+
+/* VOLTAR */
+.btn-voltar {
+    background: #b5b5b5;
+}
+
+.btn-voltar:hover {
+    background: #999;
+}
+
+/* EDITAR */
+.btn-editar {
+    background: #dabb7d;
+}
+
+.btn-editar:hover {
+    background: #c7a765;
+}
+
+/* EXCLUIR */
+.btn-excluir {
+    background: #ff0808;
+}
+
+.btn-excluir:hover {
+    background: #d90000;
+}
+
+/* BOTÃO DE TESTE */
+.btn-abrir-modal {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #dabb7d;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+
+    .modal-container {
+        max-height: 90vh;
+        overflow-y: auto;
+
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .modal-imagens {
+        width: 38%;
+    }
+
+    .imagem-principal {
+        height: 300px;
+    }
+
+    .miniaturas img {
+        height: 75px;
+    }
+
+    .modal-informacoes h2 {
+        font-size: 25px;
+    }
+
+    .modal-informacoes .preco {
+        font-size: 40px;
+    }
+
+    .modal-informacoes h3 {
+        font-size: 23px;
+    }
+
+    .detalhes-produto p {
+        font-size: 17px;
+    }
+
+    .modal-botoes button,
+    .modal-botoes a {
+        height: 52px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .modal-overlay {
+        padding: 12px;
+    }
+
+    .modal-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .modal-imagens {
+        width: 100%;
+    }
+
+    .imagem-principal {
+        height: 250px;
+    }
+
+    .miniaturas img {
+        height: 75px;
+    }
+
+    .modal-informacoes {
+        width: 100%;
+    }
+
+    .modal-informacoes h2 {
+        font-size: 24px;
+    }
+
+    .modal-informacoes .preco {
+        font-size: 38px;
+    }
+
+    .modal-informacoes h3 {
+        font-size: 22px;
+    }
+
+    .detalhes-produto p {
+        font-size: 16px;
+    }
+
+    .modal-botoes button,
+    .modal-botoes a {
+        height: 50px;
+        font-size: 19px;
+    }
+}
