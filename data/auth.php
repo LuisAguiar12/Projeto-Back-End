@@ -5,8 +5,9 @@
         exit;
     }else{
         if($_SESSION["tipo_usuário"] === "Cliente"){
-            header("Location: /")
+            header("Location /home.php");
+        }else{
+            header("Location /index.php");
         }
-    };
-    
+    }
 ?>

@@ -10,7 +10,6 @@
 </head>
 <body>
     <?php include 'view/header-adm.php';?>
-    <?php
-    include 'view/menu-lateral.php';?>
+    <?php include 'view/menu-lateral.php';?>
 </body>
 </html>
