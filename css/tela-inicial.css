@@ -1,9 +1,135 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 }
-body{
 
-    background-color: #F2EBE1;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1eae0;
+    color: #222;
+}
+
+
+.dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 18px;
+    background-color: #f1eae0;
+    min-height: calc(100vh - 46px);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* SAUDAÇÃO */
+.welcome {
+    margin-bottom: 8px;
+}
+
+.welcome h1 {
+    font-size: 24px;
+    color: #555;
+    margin: 0;
+}
+
+.welcome h1 span {
+    color: #d6b978;
+}
+
+.welcome p {
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* CARDS */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr 0.85fr 1.3fr;
+    gap: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.info-card {
+    min-width: 0;
+    background-color: #f7f5f2;
+    border: 1px solid #e0d9d0;
+    border-radius: 5px;
+    height: 60px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-card span {
+    font-size: 8px;
+    color: #666;
+}
+
+.info-card h2 {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* TABELAS */
+.dashboard-tables {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.dashboard-table {
+    min-width: 0;
+    background-color: #f7f5f2;
+    border: 1px solid #e0d9d0;
+    border-radius: 5px;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+/* TÍTULOS */
+.table-header {
+    background-color: #080808;
+    color: white;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #bca77b;
+}
+
+.table-header h3 {
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* TABELAS */
+.table-content {
+    padding: 7px 10px;
+    overflow-x: auto;
+}
+
+.table-content table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-content th {
+    font-size: 8px;
+    padding: 5px 2px;
+    border-bottom: 1px solid #aaa;
+}
+
+.table-content td {
+    font-size: 8px;
+    color: #888;
+    padding: 7px 2px;
+    border-bottom: 1px solid #aaa;
 }

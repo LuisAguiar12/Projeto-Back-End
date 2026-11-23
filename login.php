@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <?php
     session_start();
     require "./data/conexao.php";
@@ -32,7 +31,7 @@
 ?>
 
 
->>>>>>> 7116ede3ff1994b3e04c18ba68f3120f0203c249
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

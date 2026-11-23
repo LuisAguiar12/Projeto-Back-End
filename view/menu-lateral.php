@@ -22,7 +22,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
 
         <sidebar class="telas-adm">
 
-            <a class="telas <?= $paginaAtual === 'home.php' ? 'ativo' : '' ?>" href="<?= $basePath ?>">
+            <a class="telas <?= $paginaAtual === 'home-adm.php' ? 'ativo' : '' ?>" href="<?= $basePath ?>">
                 <img src="<?= $basePath ?>image/Inicio.svg" alt="Início">
                 <h1>Início</h1>
             </a>
