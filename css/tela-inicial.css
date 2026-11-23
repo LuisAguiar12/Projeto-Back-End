@@ -12,7 +12,8 @@ body {
 
 
 .dashboard-content {
-    width: 100%;
+    width: 80%;
+    margin-left: 20%;
     max-width: 100%;
     padding: 12px 18px;
     background-color: #f1eae0;
@@ -20,24 +21,27 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+.dashboard{
+    margin-top: 150px;
+}
 
-/* SAUDAÇÃO */
-.welcome {
+
+section {
     margin-bottom: 8px;
 }
 
-.welcome h1 {
-    font-size: 24px;
+section h1 {
+    font-size: 60px;
     color: #555;
     margin: 0;
 }
 
-.welcome h1 span {
+section h1 span {
     color: #d6b978;
 }
 
-.welcome p {
-    font-size: 11px;
+section p {
+    font-size: 17px;
     margin-top: 2px;
 }
 
@@ -55,7 +59,7 @@ body {
     background-color: #f7f5f2;
     border: 1px solid #e0d9d0;
     border-radius: 5px;
-    height: 60px;
+    height: 80px;
     padding: 8px 10px;
     box-sizing: border-box;
 
@@ -65,17 +69,17 @@ body {
 }
 
 .info-card span {
-    font-size: 8px;
+    font-size: 17px;
     color: #666;
 }
 
 .info-card h2 {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: normal;
     margin: 0;
 }
 
-/* TABELAS */
+
 .dashboard-tables {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -88,11 +92,11 @@ body {
     background-color: #f7f5f2;
     border: 1px solid #e0d9d0;
     border-radius: 5px;
-    min-height: 180px;
+    min-height: 300px;
     overflow: hidden;
 }
 
-/* TÍTULOS */
+
 .table-header {
     background-color: #080808;
     color: white;
@@ -104,31 +108,31 @@ body {
 }
 
 .table-header h3 {
-    font-size: 11px;
+    font-size: 20px;
     font-weight: normal;
     margin: 0;
 }
 
-/* TABELAS */
-.table-content {
+
+.conteudo-tabela {
     padding: 7px 10px;
     overflow-x: auto;
 }
 
-.table-content table {
+.conteudo-tabela table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 
-.table-content th {
-    font-size: 8px;
+.conteudo-tabela th {
+    font-size: 19px;
     padding: 5px 2px;
     border-bottom: 1px solid #aaa;
 }
 
-.table-content td {
-    font-size: 8px;
+.conteudo-tabela td {
+    font-size: 17px;
     color: #888;
     padding: 7px 2px;
     border-bottom: 1px solid #aaa;
