@@ -10,11 +10,11 @@ body {
   color: #222;
 }
 .conteudo {
-  margin-left: 25%;
+  margin-left: 30%;
 }
 section {
   margin-bottom: 8px;
-
+  
   h1 {
     font-size: 60px;
     color: #555;
@@ -30,7 +30,7 @@ main {
   padding: 20px;
 }
 .tabela-container {
-  width: 1400px;
+  width: 90%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   max-height: 400px;
   overflow-x: auto;
@@ -38,7 +38,7 @@ main {
 }
 
 .tabela {
-  width: 1400px;
+  width: 100%;
   border-collapse: collapse;
   background: #f7f4f0;
   border: 1px solid #999;
@@ -82,7 +82,7 @@ main {
 .titulo {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   align-items: center;
 }
 .filtro {
