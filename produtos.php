@@ -23,7 +23,7 @@
         <div class="container">
 
             <div class="titulo">
-                <h1>Pedidos</h1>
+                <h1>Produtos</h1>
                 <img src="./image/bolsa-produtos.png" alt="" class="imagemTitulo">
             </div>
 
