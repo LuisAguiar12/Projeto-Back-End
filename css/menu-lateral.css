@@ -31,14 +31,14 @@
     width: 100%;
     padding-left: 8px;
     h1{
-        font-size: 15px;
+        font-size: 23px;
         font-weight: 200;
     }
 }
 .telas-adm{  
     margin-left:30px;
     img{
-        width:35px;
+        width:41px;
         
     }
 }
@@ -51,7 +51,7 @@
     margin-top: auto;
     margin-bottom: 20px;
     h1{
-         font-size: 25px;
+         font-size: 27px;
         font-weight: 300;
     }
     img{

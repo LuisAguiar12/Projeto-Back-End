@@ -11,15 +11,16 @@
 <body>
     <?php include 'view/header-adm.php';?>
     <?php include 'view/menu-lateral.php';?>
-   <main class="dashboard-content">
+   
+    <main class="dashboard-content">
+   <div class="dashboard">     
 
-    <!-- Saudação -->
-    <section class="welcome">
+    <section >
         <h1>Olá, <span>Maria!</span></h1>
         <p>Aqui está um resumo da sua loja.</p>
     </section>
 
-    <!-- Cards de informações -->
+
     <section class="dashboard-cards">
 
         <div class="info-card">
@@ -44,17 +45,17 @@
 
     </section>
 
-    <!-- Tabelas do dashboard -->
+
     <section class="dashboard-tables">
 
-        <!-- Clientes mais frequentes -->
+
         <div class="dashboard-table">
 
             <div class="table-header">
                 <h3>Clientes mais frequentes</h3>
             </div>
 
-            <div class="table-content">
+            <div class="conteudo-tabela">
                 <table>
                     <thead>
                         <tr>
@@ -78,14 +79,14 @@
 
         </div>
 
-        <!-- Produtos mais recentes -->
+
         <div class="dashboard-table">
 
             <div class="table-header">
                 <h3>Produtos mais recentes</h3>
             </div>
 
-            <div class="table-content">
+            <div class="conteudo-tabela ">
                 <table>
                     <thead>
                         <tr>
@@ -108,7 +109,7 @@
         </div>
 
     </section>
-
+</div>
 </main>
 
 </body>
