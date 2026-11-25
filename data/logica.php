@@ -1,5 +1,5 @@
 <?php
-require "data/conexao.php";
+require __DIR__ . "/conexao.php";
 $sql = "select * from clientes";
 $resultado = $conn->query($sql);
 
@@ -11,7 +11,7 @@ $resultado = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/logica.css">
+    <link rel="stylesheet" href="../css/logica.css">
     <title>Gerenciamento de Clientes</title>
 
 </head>

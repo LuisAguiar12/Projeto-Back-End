@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body > main {
+    flex: 1 0 auto;
+}
+
+.site-footer {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    min-height: clamp(76px, 7vw, 116px);
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    gap: 32px;
+    padding: 16px clamp(24px, 8vw, 140px);
+    overflow: hidden;
+    background: #100a05 url("../image/footer.png") center 48% / cover no-repeat;
+    color: #fff7eb;
+}
+
+.site-footer::before {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7, 5, 3, 0.3), rgba(7, 5, 3, 0.52) 50%, rgba(7, 5, 3, 0.16));
+    content: "";
+}
+
+.site-footer-monograma,
+.site-footer p {
+    position: relative;
+    z-index: 1;
+}
+
+.site-footer-monograma {
+    display: block;
+    width: clamp(72px, 8vw, 130px);
+    flex: 0 0 auto;
+}
+
+.site-footer-monograma img {
+    display: block;
+    width: 100%;
+}
+
+.site-footer p {
+    margin: 0;
+    font-family: var(--fonte-serif);
+    font-size: clamp(14px, 1.15vw, 20px);
+    font-weight: 600;
+    letter-spacing: 0.015em;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        min-height: 72px;
+        gap: 16px;
+        padding: 12px 18px;
+    }
+
+    .site-footer-monograma {
+        width: 60px;
+    }
+
+    .site-footer p {
+        font-size: 13px;
+    }
+}
