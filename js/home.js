@@ -37,10 +37,13 @@
 
     /* ---------- Barra de progresso ---------- */
 
-    const barra = document.createElement('div');
-    barra.className = 'progresso';
-    barra.setAttribute('aria-hidden', 'true');
-    document.body.prepend(barra);
+    let barra = document.querySelector('.progresso');
+    if (!barra) {
+        barra = document.createElement('div');
+        barra.className = 'progresso';
+        barra.setAttribute('aria-hidden', 'true');
+        document.body.prepend(barra);
+    }
 
     /* ---------- Título das coleções: palavra por palavra ---------- */
 
@@ -199,9 +202,20 @@
         if (ativo) pedir();
     }
 
-    /* ---------- Scroll: header inteligente + atualização ---------- */
+    /* ---------- Scroll: story parallax and header state ---------- */
 
-    
+    window.addEventListener('scroll', () => {
+        alvoY = window.scrollY;
+        const descendo = alvoY > ultimoY;
+        if (header) {
+            header.classList.toggle('compacto', alvoY > 36);
+            header.classList.toggle('is-scrolled', alvoY > 36);
+            header.classList.toggle('descendo', descendo && alvoY > 240);
+        }
+        ultimoY = alvoY;
+        pedir();
+    }, { passive: true });
+    window.addEventListener('resize', pedir, { passive: true });
 
     /* ---------- Mouse: brilho dos cards ---------- */
 
@@ -214,15 +228,23 @@
 
                 card.el.style.setProperty('--mx', `${(px * 100).toFixed(1)}%`);
                 card.el.style.setProperty('--my', `${(py * 100).toFixed(1)}%`);
+                card.el.style.setProperty('--tilt-x', `${((px - 0.5) * 5).toFixed(2)}deg`);
+                card.el.style.setProperty('--tilt-y', `${((0.5 - py) * 5).toFixed(2)}deg`);
 
                 card.tx = (px - 0.5) * 2;
                 card.ty = (py - 0.5) * 2;
                 pedir();
             });
 
+            card.el.addEventListener('pointerenter', () => {
+                cards.forEach(other => other.el.classList.toggle('is-dimmed', other.el !== card.el));
+            });
             card.el.addEventListener('pointerleave', () => {
                 card.tx = 0;
                 card.ty = 0;
+                card.el.style.setProperty('--tilt-x', '0deg');
+                card.el.style.setProperty('--tilt-y', '0deg');
+                cards.forEach(other => other.el.classList.remove('is-dimmed'));
                 pedir();
             });
         });
