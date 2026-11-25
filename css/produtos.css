@@ -110,8 +110,6 @@ body {
     width: 100%;
 }
 
-
-
 .titulo {
     display: flex;
     align-items: center;
@@ -259,3 +257,65 @@ main {
     padding: 20px;
 }
 
+/* ========================================
+   BOTÃO ADICIONAR PRODUTO
+======================================== */
+
+.btn-adicionar {
+    width: 220px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    background-color: #DDBB7B;
+
+    border: none;
+    border-radius: 7px;
+
+    color: #FFFFFF;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* ========================================
+   ÍCONE DE ADIÇÃO
+======================================== */
+
+.icone-mais {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+
+/* ========================================
+   EFEITO HOVER
+======================================== */
+
+.btn-adicionar:hover {
+    background-color: #C9A665;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+    .btn-adicionar {
+        width: 180px;
+        height: 40px;
+        gap: 15px;
+    }
+}   

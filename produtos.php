@@ -1,3 +1,28 @@
+<?php
+require "data/conexao.php";
+$sql = "SELECT
+    produtos.id_produto,
+    produtos.nome,
+    produtos.preco,
+    categorias.nome AS categoria,
+    generos.nome AS genero,
+    SUM(estoque.quantidade) AS estoque_total
+FROM produtos
+INNER JOIN categorias
+    ON produtos.id_categoria = categorias.id_categoria
+INNER JOIN generos
+    ON produtos.id_genero = generos.id_genero
+INNER JOIN estoque
+    ON produtos.id_produto = estoque.id_produto
+GROUP BY
+    produtos.id_produto,
+    produtos.nome,
+    categorias.nome,
+    generos.nome;";
+$resultado = $conn->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,7 +53,6 @@
             </div>
 
             <!-- ABAS -->
-
 
             <div class="filtros">
 
@@ -62,6 +86,14 @@
                     </select>
                 </div>
 
+                <!-- FILTRO DE STATUS -->
+
+                <div class="">
+                    <a href="adicionar-produto.php" class="btn-adicionar">
+                        <span class="icone-mais">+</span>
+                        <span>Adicionar produto</span>
+                    </a>
+                </div>
             </div>
 
 
@@ -84,17 +116,20 @@
                     </thead>
 
                     <tbody>
+                        <?php while ($produto = $resultado->fetch_object()): ?>
 
-                        <tr data-status="entregue">
-                            <td><img src="" alt="" class="imgTable"></td>
-                            <td class="cliente">Blazer Alfaiataria</td>
-                            <td class="data">Blazer</td>
-                            <td class="data">Masculino</td>
-                            <td class="data">R$599,90</td>
-                            <td class="data">100</td>
-                            <td><span class="status entregue">ativo</span></td>
-                            <td><button class="acao" type="button" class="btn-acao" onclick="abrirModal()">•••</button></td>
-                        </tr>
+                            <tr data-status="entregue">
+                                <td><img src="<?= $produto -> nome ?>" alt="" class="imgTable"></td>
+                                <td class="cliente"><?= $produto -> nome ?></td>
+                                <td class="data"><?= $produto -> categoria ?></td>
+                                <td class="data"><?= $produto -> genero ?></td>
+                                <td class="data"><?= $produto -> preco ?></td>
+                                <td class="data"><?= $produto -> estoque_total ?></td>
+                                <td><span class="status entregue">ativo</span></td>
+                                <td><button class="acao" type="button" class="btn-acao" onclick="abrirModal()">•••</button></td>
+                            </tr>
+
+                        <?php endwhile; ?>
     </main>
 
     <!-- MODAL -->
