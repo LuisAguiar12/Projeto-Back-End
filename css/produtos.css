@@ -169,6 +169,7 @@ body {
     width: 100%;
     overflow-x: auto;
     border-radius: 8px;
+    max-height: 350px;
 }
 
 .tabela {
@@ -176,6 +177,7 @@ body {
     border-collapse: collapse;
     background: #F7F4F0;
     border: 1px solid #999;
+
 }
 
 .tabela thead {
@@ -191,7 +193,7 @@ body {
 }
 
 .tabela td {
-    padding: 13px 22px;
+    padding: 5px 22px;
     font-size: 12px;
     border-bottom: 1px solid #999;
 }
@@ -252,8 +254,8 @@ body {
 }
 
 main {
-    margin-left: 340px;
-    margin-top: 70px;
+    margin-left: 360px;
+    margin-top: 0px;
     padding: 20px;
 }
 
