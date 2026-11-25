@@ -92,7 +92,15 @@
 
                 <!-- BOTÃO ENTRAR -->
                 <button type="submit" class="btn-entrar">
+<<<<<<< HEAD
                     <a href="home-adm.php">ssssss</a>Entrar
+=======
+
+                    Entrar
+
+                    <a href="index.php">ssssss</a>Entrar
+
+>>>>>>> 5667263a7eb13aca577473670a2c942bab4ac24c
                 </button>
 
                 <!-- CADASTRO -->
