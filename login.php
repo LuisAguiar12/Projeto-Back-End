@@ -92,11 +92,11 @@
 
                 <!-- BOTÃO ENTRAR -->
                 <button type="submit" class="btn-entrar">
-<<<<<<< HEAD
+
                     Entrar
-=======
+
                     <a href="index.php">ssssss</a>Entrar
->>>>>>> 7116ede3ff1994b3e04c18ba68f3120f0203c249
+
                 </button>
 
                 <!-- CADASTRO -->

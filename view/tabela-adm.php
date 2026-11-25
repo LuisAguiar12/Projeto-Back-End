@@ -11,37 +11,6 @@
     <main> 
              <div class="container">
     
-            <div class="titulo">
-                <h1>Pedidos</h1>
-                <span></span>
-            </div>
-    
-            <!-- ABAS -->
-            <div class="abas">
-    
-                <button class="aba ativa" onclick="filtrar('todos', this)">
-                    Todos (5)
-                </button>
-    
-                <button class="aba" onclick="filtrar('pago', this)">
-                    Pago (1)
-                </button>
-    
-                <button class="aba" onclick="filtrar('separacao', this)">
-                    Em separação (1)
-                </button>
-    
-                <button class="aba" onclick="filtrar('enviado', this)">
-                    Enviado (1)
-                </button>
-    
-                <button class="aba" onclick="filtrar('entregue', this)">
-                    Entregue (2)
-                </button>
-    
-            </div>
-    
-            <!-- TABELA -->
             <div class="tabela-container">
     
                 <table class="tabela">
